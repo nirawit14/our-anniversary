@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วันนี้เป็นวันครบรอบของเราใช่มั้ยนะ? 💕</title>
+    <meta name="description" content="สำหรับคนพิเศษ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <canvas id="heartCanvas"></canvas>
+
+    <div class="sparkle-container" id="sparkleContainer"></div>
+
+    <main id="app">
+
+        <section id="page1" class="page active">
+            <div class="page-content">
+                <div class="floating-hearts">
+                    <span class="float-heart">💕</span>
+                    <span class="float-heart">🐤</span>
+                    <span class="float-heart">💗</span>
+                </div>
+                <div class="glass-card main-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-main" id="mainQuestion">วันนี้เป็นวันครบรอบของเราใช่มั้ยนะ</h1>
+                    <p class="subtitle" id="subQuestion">ตอบว่าใช่สิรอรัยอะ</p>
+                    <div class="button-group">
+                        <button id="yesBtn" class="btn btn-yes">
+                            <span class="btn-text">ใช่</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="noBtn" class="btn btn-no">
+                            <span class="btn-text">ไม่</span>
+                        </button>
+                    </div>
+                    <p id="noEscapeText" class="escape-text hidden"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page2" class="page">
+            <div class="page-content">
+                <div class="celebration-burst" id="celebrationBurst"></div>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <div class="emoji-bounce">💗</div>
+                    <h1 class="title-cursive" id="confirmTitle">Welcome to our 2nd month</h1>
+                    <div class="confirmation-box">
+                        <p id="confirmText">วันนี้ถือว่าเป็นวันครบรอบ 2 เดือนของเราแล้วนะ</p>
+                        <div class="badge-container">
+                            <div class="badge">
+                                <span class="badge-text">คนโปรดของเค้า</span>
+                                <div class="badge-sparkle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button id="nextToPage3" class="btn btn-primary">
+                            <span class="btn-text">ต่อไป</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="backToPage1" class="btn btn-ghost btn-small">ทวนคำถาม</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page3" class="page">
+            <div class="page-content flower-page">
+                <div class="falling-petals" id="petalsContainer"></div>
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-cursive" id="flowerTitle">นี่คือของขวัญพิเศษที่เค้าตั้งใจทำให้เธอเลยนะ</h1>
+                    <div class="bouquet-wrapper">
+                        <div class="bouquet-glow"></div>
+                        <div class="bouquet" id="bouquet">
+                            <img src="flower/11.png" alt="ช่อดอกไม้" class="bouquet-img">
+                        </div>
+                    </div>
+                    <p id="bouquetMessage" class="bouquet-message hidden">นั้นนน! ตอนนี้เป็นของเธอแล้วว 💕</p>
+                    <div class="button-group">
+                        <button id="takeBouquet" class="btn btn-primary">
+                            <span class="btn-text">รับของขวัญ</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                        <button id="nextToPage4" class="btn btn-primary hidden">
+                            <span class="btn-text">ถัดไป</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page4" class="page">
+            <div class="page-content">
+                <div class="glass-card collage-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-cursive" id="collageTitle">ความทรงจำของเรา 2 เดือนที่ผ่านมา</h1>
+                    <p class="collage-subtitle" id="collageSubtitle">กดดูรูปได้นะจ๊ะติ๋ม 💖</p>
+                    <div class="photo-grid">
+                        <div class="photo-item">
+                            <img src="flower/22.png" class="photo-preview" alt="นี่คือการเล่นเเก็งครั้งเเรกของเค้า..สนุกมากกกกก">
+                        </div>
+                        <div class="photo-item">
+                            <img src="flower/33.png" class="photo-preview" alt="อย่ามาซ่ากับพี่เข้าใจปะน้องงง">
+                        </div>
+                        <div class="photo-item">
+                            <img src="flower/44.png" class="photo-preview" alt="ส่วนนี่คือเพื่อนคนเเรกของเค้าใน FiveM">
+                        </div>
+                        <div class="photo-item">
+                            <img src="flower/55.png" class="photo-preview" alt="เเล้วก็นี่เเฟนคนเเรกของเค้าใน FiveM">
+                        </div>
+                        <div class="photo-item">
+                            <img src="flower/66.png" class="photo-preview" alt="เอิ่มมมมข้ามรูปนี้ไปเลยนะ">
+                        </div>
+                        <div class="photo-item">
+                            <img src="flower/77.png" class="photo-preview" alt="เค้าชอบรูปนี้สุดละเหมือนเธอดี 😊">
+                        </div>
+                    </div>
+                    <button id="nextToPage5" class="btn btn-primary">
+                        <span class="btn-text">อีกหนึ่งหน้าจ้า…</span>
+                        <span class="btn-shine"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="page5" class="page">
+            <div class="page-content">
+                <div class="glass-card">
+                    <div class="card-glow"></div>
+                    <h1 class="title-cursive">รูปอาจจะมีเเค่นี้เเต่...</h1>
+                    <p class="collage-subtitle">"ความสุขที่เเท้จริงไม่มีใครถ่ายไว้ได้ทันหรอกนะ"</p>
+                    <div class="horizontal-gallery">
+                        <img src="flower/88.png" alt="สมาคมเป็ดน้อย..ว่าเเต่ไอขวามือใคร" class="horizontal-photo">
+                        <img src="flower/99.png" alt="คิดถึงเสมอ ไม่เจอก็รักเนอะ" class="horizontal-photo">
+                    </div>
+                    <div class="button-group">
+                        <button id="backToPage4" class="btn btn-ghost btn-small">ย้อนกลับ</button>
+                        <button id="nextToPage6" class="btn btn-primary">
+                            <span class="btn-text">ไปหน้าต่อไปกัน</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page6" class="page">
+            <div class="page-content">
+                <div id="confettiContainer" class="confetti-container"></div>
+
+                <div class="envelope-wrapper" id="envelopeWrapper">
+                    <div class="envelope-container">
+                        <div class="envelope" id="envelope">
+                            <div class="envelope-back"></div>
+                            <div class="letter" id="letter">
+                                <div class="letter-content">
+                                    <span class="letter-heart">💕</span>
+                                    <span class="letter-text">For You</span>
+                                </div>
+                            </div>
+                            <div class="envelope-front"></div>
+                            <div class="envelope-flap"></div>
+                        </div>
+                    </div>
+                    <p class="envelope-hint" id="envelopeHint">แตะเพื่อเปิด</p>
+                </div>
+
+                <div class="glass-card final-card hidden" id="finalContent">
+                    <div class="card-glow"></div>
+                    <div class="final-emoji">💞</div>
+                    <h1 class="title-cursive title-final" id="finalTitle">Happy 2nd Mensiversary nakub K'tim </h1>
+                    <div class="message-box">
+                        <div class="message-decoration">✨</div>
+                        <p id="finalMessage">
+                            เห้ออเผลอแป๊บเดียวก็ครบ 2 เดือนแล้วนะ ขอบคุณที่เข้ามาในชีวิตเค้า ขอบคุณสำหรับทุกอย่างที่ผ่านมาเลยนะอยู่ด้วยกันแล้วมีความสุขมากจริงๆ 2 เดือนอาจจะดูไม่นานแต่สำหรับเค้ามันเป็นช่วงเวลาที่ดีมากๆเลยนะขอให้เรายังมีกันแบบนี้ไปเรื่อยๆนะ ชอบเธอมากขึ้นทุกวันเลยสุขสันต์วันครบรอบนะค้าบจากเด้กกก 🤍
+                        </p>
+                        <div class="message-decoration right">✨</div>
+                    </div>
+                    <div class="button-group final-buttons">
+                        <button id="restartBtn" class="btn btn-ghost">
+                            <span class="btn-text">เริ่มใหม่</span>
+                        </button>
+                        <button id="copyBtn" class="btn btn-primary">
+                            <span class="btn-text">คัดลอกข้อความ</span>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                    <p id="copyNotif" class="copy-notif hidden">คัดลอกข้อความทำมัยยย!!</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-modal hidden" id="imageModal">
+            <div class="image-modal-backdrop" id="imageModalBackdrop"></div>
+            <div class="image-modal-content">
+                <button class="image-modal-close" id="imageModalClose" aria-label="ปิด">×</button>
+                <img src="" alt="" id="imageModalImg">
+                <p class="image-modal-caption" id="imageModalCaption"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
